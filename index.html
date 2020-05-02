@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="meet">
+        <!-- <iframe src="https://jitsi.ml/ggg" frameborder="0" width="600" height="600"></iframe> -->
+    </div>
+    <script src='https://meet.jit.si/external_api.js'></script>
+    <script>
+        const domain = 'jitsi.ml';
+        const options = {
+            roomName: 'qqq',
+            width: 700,
+            height: 700,
+            parentNode: document.querySelector('#meet'),
+            userInfo: {
+                email: 'email@jitsiexamplemail.com',
+                displayName: 'John Doe'
+            },
+            interfaceConfigOverwrite: {
+                TOOLBAR_BUTTONS: [
+                    'microphone', 'camera','fullscreen','hangup', 'profile','videoquality', 
+                ],
+                SHOW_JITSI_WATERMARK: false,
+                SHOW_WATERMARK_FOR_GUESTS: false,
+
+            },
+
+        };
+        const api = new JitsiMeetExternalAPI(domain, options);
+        api.executeCommand('avatarUrl','https://api.adorable.io/avatars/285/abott@adorable.png');
+
+
+        api.executeCommand('displayName', 'toni');
+        api.executeCommand('password', 'qqq');
+    </script>
+
+</body>
+
+</html>
