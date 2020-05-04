@@ -15,13 +15,13 @@
     <script>
         const domain = 'jitsi.ml';
         const options = {
-            roomName: 'qqq',
+            roomName: 'room',
             width: 700,
             height: 700,
             parentNode: document.querySelector('#meet'),
             userInfo: {
-                email: 'email@jitsiexamplemail.com',
-                displayName: 'John Doe'
+                email: 'email@doctors.com',
+                displayName: 'display name'
             },
             interfaceConfigOverwrite: {
                 TOOLBAR_BUTTONS: [
@@ -37,8 +37,8 @@
         api.executeCommand('avatarUrl','https://api.adorable.io/avatars/285/abott@adorable.png');
 
 
-        api.executeCommand('displayName', 'toni');
-        api.executeCommand('password', 'qqq');
+        api.executeCommand('displayName', 'example');
+        api.executeCommand('password', '123456');
     </script>
 
 </body>
